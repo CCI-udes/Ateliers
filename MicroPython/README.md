@@ -62,6 +62,8 @@ Unlike the RP2040, the ESP32-S3 requires a serial flasher to write to its flash 
 6. Select your target port (e.g., `COM3` or `/dev/ttyACM0`), browse for the `.bin` file you downloaded, and click **Install**.
     * *Alternative CLI Method:* Advanced users can use the [esptool.py command-line utility](https://docs.espressif.com/projects/esptool/en/latest/esp32/).
 
+### For a version with MicroPython including ulab (NumPy)
+[Link to ESP32 and RP Pico uf2 and bin](https://github.com/v923z/micropython-builder/releases) 
 ---
 
 ## 3. Library & Package Management
