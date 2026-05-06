@@ -223,7 +223,7 @@ from ulab import numpy as np
 print("ulab successfully imported!")
 
 # 1. High-Speed Array Generation
-# Create a contiguous 1D array of 100 points from 0 to 2*Pi
+# Create a contiguous 1D array of 10 points from 0 to 2*Pi
 time_steps = np.linspace(0, 2 * math.pi, num=100)
 
 # 2. Vectorized Math (No Python loops required)
@@ -232,7 +232,8 @@ signal = np.sin(time_steps)
 
 # 3. Fast Array Manipulation
 # Add a random noise floor to the signal
-noise = np.random.uniform(size=100) * 0.1
+rng = np.random.Generator(123456)
+noise = rng.random(size=(100,)) * 0.1
 noisy_signal = signal + noise
 
 # 4. Statistical Analysis
@@ -257,6 +258,7 @@ print(f"First 5 smoothed values: {smoothed_signal[:5]}")
 
 # Always collect garbage after large array operations
 gc.collect()
+
 ```
 
 ---
